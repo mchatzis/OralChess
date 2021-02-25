@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">OralChess</string>
+    <string name="OralChess_BrandName">Oral Chess</string>
+    <string name="welcomeScreen_signIn"/>
+    <string name="welcomeScreen_SignIn">log in</string>
+    <string name="LogIn_log_in_button">log in</string>
+    <string name="LogIn__lichess_text">lichess.org</string>
+    <string name="LogIn__username">username</string>
+    <string name="LogIn__background_image">background image</string>
+    <string name="LogIn__hing_username">username</string>
+    <string name="LogIn__password">password</string>
+</resources>
