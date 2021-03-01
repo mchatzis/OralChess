@@ -20,9 +20,9 @@ public class AccountDataRequest {
 
         //Create a handler for the IRetrofit interface//
         IRetrofit retroClass = RetroClient.getRetroInstance().create(IRetrofit.class);
-        Call<String> serverCall = retroClass.getAccountData();
+        Call<EmailData> serverCall = retroClass.getEmailData();
 
-        Response<String> serverResponse = serverCall.execute();
+        Response<EmailData> serverResponse = serverCall.execute();
 
         String wait = "wait";
 

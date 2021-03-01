@@ -12,8 +12,8 @@ public class LichessAccountData {
     @SerializedName("id")
     private String id;
 
-    public LichessAccountData(String id) {
-        this.id = id;
+    public LichessAccountData(String email) {
+        this.id = email;
     }
 
     public String getId() {
