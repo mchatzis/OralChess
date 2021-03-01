@@ -28,10 +28,6 @@ public class AccountDataRequest {
         IRetrofit retroClass = RetroClient.getRetroInstance().create(IRetrofit.class);
         Call<List<Posts>> serverCall = retroClass.getPosts();
 
-        //Response<List<Posts>> serverResponse = serverCall.execute();
-
-        String wait = "wait";
-
 /*        //Execute the server request asynchronously
         serverCall.enqueue(new Callback<List<LichessAccountData>>() {
 
