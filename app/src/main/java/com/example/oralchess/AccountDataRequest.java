@@ -18,11 +18,17 @@ public class AccountDataRequest {
     public LichessAccountData getAccountData() throws IOException{
 
 
-        //Create a handler for the IRetrofit interface//
+/*        //Create a handler for the IRetrofit interface//
         IRetrofit retroClass = RetroClient.getRetroInstance().create(IRetrofit.class);
         Call<EmailData> serverCall = retroClass.getEmailData();
 
-        Response<EmailData> serverResponse = serverCall.execute();
+        Response<EmailData> serverResponse = serverCall.execute();*/
+
+        //Create a handler for the IRetrofit interface//
+        IRetrofit retroClass = RetroClient.getRetroInstance().create(IRetrofit.class);
+        Call<List<Posts>> serverCall = retroClass.getPosts();
+
+        //Response<List<Posts>> serverResponse = serverCall.execute();
 
         String wait = "wait";
 

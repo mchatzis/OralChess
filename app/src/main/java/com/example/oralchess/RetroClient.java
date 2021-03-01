@@ -7,7 +7,8 @@ public class RetroClient {
 
     private static Retrofit retrofit;
 
-    private static final String BASE_URL = "https://lichess.org/api/";
+    //private static final String BASE_URL = "https://lichess.org/api/";
+    private static final String BASE_URL = "https://jsonplaceholder.typicode.com/";
 
     public static Retrofit getRetroInstance(){
         if (retrofit == null){

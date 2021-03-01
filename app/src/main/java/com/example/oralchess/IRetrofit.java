@@ -14,6 +14,9 @@ public interface IRetrofit {
     @GET("account/email")
     Call<EmailData> getEmailData();
 
+    @GET("posts")
+    Call<List<Posts>> getPosts();
+
 /*
 
     @GET("users/{user}/repos")
