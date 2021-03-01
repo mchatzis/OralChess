@@ -8,8 +8,8 @@ import java.util.List;
 
 public interface IRetrofit {
 
-    @GET("/account")
-    Call<List<LichessAccountData>> getAllPosts();
+    @GET("account")
+    Call<String> getAccountData();
 
 /*
 

@@ -6,6 +6,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+import java.io.IOException;
 
 public class LogIn extends AppCompatActivity {
 
@@ -22,15 +26,19 @@ public class LogIn extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String received_username = username.getText().toString();
+/*                String received_username = username.getText().toString();
                 String received_password = password.getText().toString();
                 String message_to_display = received_username + "\n" + received_password + "okay  ";
-                Toast.makeText(LogIn.this,message_to_display,Toast.LENGTH_SHORT).show();
+                Toast.makeText(LogIn.this,message_to_display,Toast.LENGTH_SHORT).show();*/
 
                 AccountDataRequest accountDataRequest = new AccountDataRequest(personal_oauth);
-                LichessAccountData lichessAccountData = accountDataRequest.getAccountData();
-
-                Toast.makeText(LogIn.this,lichessAccountData.getId(),Toast.LENGTH_SHORT).show();
+                try {
+                    LichessAccountData lichessAccountData = accountDataRequest.getAccountData();
+                    Toast.makeText(LogIn.this,lichessAccountData.getId(),Toast.LENGTH_SHORT).show();
+                }
+                catch (IOException e){
+                    Toast.makeText(LogIn.this,e.toString(),Toast.LENGTH_SHORT);
+                }
 
             }
         });
